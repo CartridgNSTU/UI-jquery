@@ -1,12 +1,17 @@
 $(document).ready(function(){
-   
-	$("#accordion1").accordion();
 
-	$("#accordion2").accordion();
+	$("#sd1").slider();
+	$("#pb1").progressbar({value:40});
+	$("#tabs").tabs();
+	$("#but1").click(function(){
+	$("#descr1").dialog();
+});
 
-	$("#auto").autocomplete({source:$("#list").text().split("\\n"), minLength:"3"});
+	$("#but2").click(function(){
+		$("#descr2").dialog();
+	});
+	$("#but3").click(function(){
+		$("#descr3").dialog();
+	});
 
-	$("#el1, #el2").button();
-	
-	$("#el3").buttonset();
 });

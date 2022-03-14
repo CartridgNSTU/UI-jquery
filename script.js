@@ -1,19 +1,12 @@
 $(document).ready(function(){
+   
+	$("#accordion1").accordion();
 
-$("#el1").resizable().draggable({revert:true});
+	$("#accordion2").accordion();
 
-$("#sort1").sortable();
+	$("#auto").autocomplete({source:$("#list").text().split("\\n"), minLength:"3"});
 
-$("#el2,#el3").draggable({revert:true});
-
-$("#drop1").droppable({
-	accept:"#el2,#el3",
-drop:
-function(event,ui){ui.draggable.css("display","none");
-$("#drop1").css("background-color","green");}});
-
-$("#drop2").droppable({
-	accept:"#el3", drop:function(){
-$("#el3").css("display","none");
-$("#drop2").css("background-color","green");}});
+	$("#el1, #el2").button();
+	
+	$("#el3").buttonset();
 });
